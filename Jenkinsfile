@@ -3,14 +3,27 @@ pipeline {
    
   
   stages {
-    stage('Build') {
+    
+    
+    stage('Preparation') {
       steps {
         
         git 'https://github.com/ZiadAmr14/jenkins_nodejs_example.git'
         
-        sh """ ls
-               mkdir test 
-        """
+      }
+      
+    }
+    
+    
+    stage('Docker Build') {
+      steps {
+        
+        sh """
+          docker build . -f dockerfile -t sprintsJenkinsCourse:latest
+          
+        
+        """"
+        
       }
       
     }
