@@ -22,7 +22,7 @@ pipeline {
           docker build . -f dockerfile -t sprintsJenkinsCourse:latest
           
         
-        """"
+        """
         
       }
       
