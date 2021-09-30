@@ -19,7 +19,7 @@ pipeline {
       steps {
         
         sh """
-          docker build . -f dockerfile -t sprintsJenkinsCourse:latest
+          docker build . -f dockerfile -t ziadamr14/sprintsJenkinsCourse:latest
           
         
         """
