@@ -19,10 +19,10 @@ pipeline {
       steps {
         withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
         sh """
-          docker build . -f dockerfile -t ziadamr14/sprintsJenkinsCourse:latest
+          docker build . -f dockerfile -t ziadamr14/sprints_jenkins_course:latest
           docker login -u ${USERNAME} -p ${PASSWORD}
           
-          docker push ziadamr14/sprintsJenkinsCourse:latest
+          docker push ziadamr14/sprints_jenkins_course:latest
           
         
         """
