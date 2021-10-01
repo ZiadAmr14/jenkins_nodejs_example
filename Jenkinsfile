@@ -31,6 +31,18 @@ pipeline {
       
     }
     
+    stage('deployment') {
+      steps {
+        sh """
+          docker run -d -p 3000:3000 ziadamr14/sprints_jenkins_course:latest
+          
+        
+        """
+        
+      }
+      
+    }
+    
   }
   
 }
