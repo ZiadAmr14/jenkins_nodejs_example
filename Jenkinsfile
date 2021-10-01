@@ -21,7 +21,6 @@ pipeline {
         sh """
           docker build . -f dockerfile -t ziadamr14/sprints_jenkins_course:latest
           docker login -u ${USERNAME} -p ${PASSWORD}
-          
           docker push ziadamr14/sprints_jenkins_course:latest
           
         
